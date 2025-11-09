@@ -121,6 +121,46 @@ body {
     }
 }
 
+/* Login & Signup Buttons */
+.nav-icons .btn {
+  margin-left: 1rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1.5px solid var(--acent);
+}
+
+.login-btn {
+  color: var(--acent);
+  background: transparent;
+}
+
+.signup-btn {
+  background: var(--acent);
+  color: #fff;
+}
+
+.login-btn:hover {
+  background: var(--acent);
+  color: #fff;
+}
+
+.signup-btn:hover {
+  background: transparent;
+  color: var(--acent);
+}
+
+@media (max-width: 940px) {
+  .nav-icons .btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+
 /* ===== Layout ===== */
 .main-layout {
     max-width: 1300px;
@@ -692,4 +732,38 @@ body {
     .newsletter input {
         width: 100%;
     }
+}
+
+
+
+
+
+
+/* ===========================
+   WhatsApp Floating Button
+=========================== */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  background-color: #41C451;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-btn img {
+  width: 28px;
+  height: 28px;
 }
