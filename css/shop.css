@@ -1,0 +1,189 @@
+:root {
+    --primary: #6c63ff;
+    --primary-dark: #5a55e6;
+    --bg-light: #f9fafc;
+    --text-dark: #222;
+    --text-light: #555;
+    --text-light-grey: #bbb;
+    --white: #fff;
+    --acent: #E65540;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* .shop-container{
+  max-width: 1300px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+} */
+
+
+.shop-filter{
+    margin-top: 20px;
+    background: none;
+    border: none;
+}
+
+
+/* ===== PRODUCT GRID ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 1rem 4rem;
+}
+
+.product-card {
+  text-align: center;
+  position: relative;
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card h3 {
+  font-size: 1rem;
+  margin: 0.8rem 0 0.4rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.product-card .price {
+  color: var(--text-light-grey);
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+
+
+.product-card i {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 1.2rem;
+  color: var(--text-light-grey);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.product-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card i:hover {
+  color: var(--acent);
+}
+
+
+/* ===== PRODUCT IMAGE WRAPPER ===== */
+.product-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Quick View Button */
+.quick-view-btn {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--text-dark);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card:hover .quick-view-btn {
+  bottom: 20px;
+  opacity: 1;
+}
+
+.quick-view-btn:hover {
+  background-color: var(--acent);
+}
+
+
+/* Center the button */
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+/* Main See More button */
+.see-more-btn {
+  display: inline-block;
+  padding: 12px 35px;
+  background: var(--text-dark);
+  color: var(--white);
+  font-size: 0.95rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient hover overlay using your accent color */
+.see-more-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, var(--acent), #ff7655);
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+
+.see-more-btn:hover::before {
+  left: 0;
+}
+
+.see-more-btn:hover {
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(230,85,64,0.3);
+}
+
+/* Keep text above gradient */
+.see-more-btn span {
+  position: relative;
+  z-index: 1;
+}
